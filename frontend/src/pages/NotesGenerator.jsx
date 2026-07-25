@@ -17,7 +17,7 @@ function NotesGenerator() {
 
     try {
       const res = await axios.post(
-        "https://studentos-ai-platform-1.onrender.com/api/notes/generate",
+        "https://studentos-ai-adjw.onrender.com/api/notes/generate",
         {
           topic: topic,
         },
