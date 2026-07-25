@@ -20,7 +20,7 @@ function QuizGenerator() {
     try {
 
       const res = await axios.post(
-        "https://studentos-ai-platform-1.onrender.com/api/quiz/generate",
+        "https://studentos-ai-adjw.onrender.com/api/quiz/generate",
         {
           topic: topic,
         }
