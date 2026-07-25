@@ -20,7 +20,7 @@ function StudyPlanner() {
     try {
 
       const res = await axios.post(
-        "https://studentos-ai-platform-1.onrender.com/api/study/plan",
+        "https://studentos-ai-adjw.onrender.com/api/study/plan",
         {
           goal: goal,
         }
