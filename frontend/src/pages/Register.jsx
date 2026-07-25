@@ -16,7 +16,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/api/auth/register",
+        "https://studentos-ai-adjw.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {
