@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Harsh Pandey</h1>
+<h1 align="center">Hi Ankush Patil 👋, I</h1>
 
 <h3 align="center">
 Full Stack Developer | React.js | Spring Boot | Java | AI-Powered Web Applications
@@ -8,7 +8,7 @@ Full Stack Developer | React.js | Spring Boot | Java | AI-Powered Web Applicatio
 
 ## 🚀 About Me
 
-- 🎓 BCA Student at Galgotias University
+- 🎓 B.Tech Student at LNCT University
 - 💻 Passionate about Full Stack Development
 - 🌱 Currently learning Advanced Backend & APIs
 - ⚡ Building AI-Powered Web Applications
@@ -82,7 +82,7 @@ React.js • Spring Boot • JWT • REST APIs • Gemini AI API • Tailwind CS
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/harshpandey9198/studentos-ai-platform.git
+git clone - https://github.com/ankushpatil2408-spec/StudentOS.git
 
 cd studentos-ai-platform
 
