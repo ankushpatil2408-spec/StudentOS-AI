@@ -5,7 +5,7 @@ function Analytics() {
   const [summary, setSummary] = useState("");
 
   const getSummary = async () => {
-    const res = await axios.get("https://studentos-ai-platform-1.onrender.com/api/analytics/summary");
+    const res = await axios.get("https://studentos-ai-adjw.onrender.com/api/analytics/summary");
     setSummary(res.data);
   };
 
