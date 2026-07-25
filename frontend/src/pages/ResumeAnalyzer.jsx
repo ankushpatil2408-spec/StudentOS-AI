@@ -6,7 +6,7 @@ function ResumeAnalyzer() {
   const [result, setResult] = useState("");
 
   const analyze = async () => {
-    const res = await axios.post("https://studentos-ai-platform-1.onrender.com/api/resume/analyze", { text });
+    const res = await axios.post("https://studentos-ai-adjw.onrender.com/api/resume/analyze", { text });
     setResult(res.data);
   };
 
