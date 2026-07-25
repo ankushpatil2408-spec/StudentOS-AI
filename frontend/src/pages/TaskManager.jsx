@@ -6,7 +6,7 @@ function TaskManager() {
   const [tasks, setTasks] = useState("");
 
   const generateTasks = async () => {
-    const res = await axios.post("https://studentos-ai-platform-1.onrender.com/api/tasks/suggest", { goal });
+    const res = await axios.post("https://studentos-ai-adjw.onrender.com/api/tasks/suggest", { goal });
     setTasks(res.data);
   };
 
