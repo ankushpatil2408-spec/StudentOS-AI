@@ -11,7 +11,7 @@ function AIChat() {
     try {
 
       const res = await axios.post(
-        "http://localhost:8080/api/ai/chat",
+        "https://studentos-ai-adjw.onrender.com/api/ai/chat",
         {
           question,
         }
