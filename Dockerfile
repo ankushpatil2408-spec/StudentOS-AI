@@ -29,6 +29,7 @@ RUN ./mvnw dependency:go-offline
 COPY backend/ .
 
 # Copy React build into Spring Boot static folder
+RUN chmod +x mvnw
 RUN mkdir -p src/main/resources/static
 COPY --from=frontend-build /frontend/dist/ src/main/resources/static/
 
