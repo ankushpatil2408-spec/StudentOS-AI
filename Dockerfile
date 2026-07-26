@@ -1,35 +1,43 @@
-
-# -------- Frontend Build --------
+# =========================
+# Stage 1 - Build Frontend
+# =========================
 FROM node:20 AS frontend-build
 
 WORKDIR /frontend
+
 COPY frontend/package*.json ./
 RUN npm install
 
 COPY frontend/ .
 RUN npm run build
 
-# -------- Backend Build --------
-FROM maven:3.9.9-eclipse-temurin-21 AS backend-build
+
+# =========================
+# Stage 2 - Build Backend
+# =========================
+FROM eclipse-temurin:21-jdk AS backend-build
 
 WORKDIR /backend
 
-COPY backend/pom.xml .
 COPY backend/mvnw .
 COPY backend/.mvn .mvn
-RUN chmod +x mvnw
+COPY backend/pom.xml .
 
+RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 
 COPY backend/ .
 
-# Copy React build into Spring Boot static resources
+# Copy React build into Spring Boot static folder
 RUN mkdir -p src/main/resources/static
-COPY --from=frontend-build /frontend/dist ./src/main/resources/static
+COPY --from=frontend-build /frontend/dist/ src/main/resources/static/
 
 RUN ./mvnw clean package -DskipTests
 
-# -------- Runtime --------
+
+# =========================
+# Stage 3 - Runtime
+# =========================
 FROM eclipse-temurin:21-jre
 
 WORKDIR /app
