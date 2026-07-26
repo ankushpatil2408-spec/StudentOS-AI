@@ -12,8 +12,7 @@ public class SpaController {
             "/register",
             "/dashboard",
             "/profile",
-            "/{path:^(?!api$).*$}",
-            "/**/{path:^(?!api$).*$}"
+          
     })
     public String forward() {
         return "forward:/index.html";
